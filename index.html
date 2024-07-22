@@ -1,0 +1,119 @@
+<DOCTYPE! html>
+<html> 
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="reset.css">
+		<title>Página principal</title>
+	</head>
+
+	<body class="fonte">
+		<header class="header">
+			<nav class="posicaoCima">
+				<ul>
+					<li><a class="fonteCima" href="#sobreMim">Sobre Mim</a></li>
+					<li><a class="fonteCima" href="#trabalhos">Trabalhos</a></li>	
+					<li><a class="fonteCima" href="#contato">Contato</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<main class="principal">
+			<section>
+				<div id="texto"></div>
+				<div>
+					<img src="img/imagem1.jpg" class="imagem1" id="imagem1">
+					<script>
+						window.addEventListener('load', ()=> {
+	  					document.body.classList.add('page-loaded')
+						});
+
+					</script>
+				</div>
+			</section>
+
+			<section>
+				<div class="topicoPrincipal">
+					<script>
+						const texto= `Olá, meu nome é João Patrick,
+	e este é o primeiro portfólio
+	que eu faço.
+
+	Espero que gostem!`;
+						let zero= 0;
+						const speed= 80;
+
+						function escrever() {
+		            			if (zero < texto.length) {
+		               			document.getElementById("texto").innerHTML += texto.charAt(zero);
+		               			zero++;
+		               			setTimeout(escrever, speed);
+		           			} 	else {
+		               			document.getElementById("texto").style.borderRight = 'none'; }}
+
+		                		window.onload= escrever;
+
+					</script>
+				</div>
+			</section>
+
+			<section>
+				<div id="sobreMim">
+					<img src="img/imagem2.jpg" class="imagem2">
+					<script>
+						window.addEventListener('load', ()=> {
+		  				document.body.classList.add('page-loaded')
+						});
+					</script>
+					<h2>Sobre mim</h2>
+					<p class="paragrafosSM">Sou um programador iniciante, ainda com pouco conhecimento, mas determinado a alcançar meus objetivos. Estou em busca de novas experiências que me permitam evoluir tanto profissionalmente quanto pessoalmente, visando crescimento no mercado de trabalho.</p>
+
+					<p class="paragrafosSM">Além disso, estou interessado em explorar diferentes áreas da programação, como desenvolvimento web, aplicativos móveis ou até mesmo inteligência artificial. Quero absorver o máximo de conhecimento possível para construir uma carreira sólida e contribuir de maneira significativa para projetos futuros.</p>
+
+					<p class="paragrafosSM">Ainda não possuo experiência, mas garanto força de vontade e esforço para aprender com os mais sábios e, cada vez mais, evoluir.</p>
+				</div>
+			</section>
+
+			<section>
+				<div id="trabalhos">
+					<h2 id="tituloTrabalho">Trabalhos</h2>
+					<iframe src="Barbearia/index.html" class="miniQuadrado"></iframe>
+				</div>
+			</section>
+
+			<section>
+				<div id="contato">
+					<h2>Contato</h2>
+					<form>
+						<label for="nome">Digite o seu nome:</label>
+						<input type="text" id="nome" class="input-padrao">
+
+						<label for='email'>E-mail:</label>
+						<input type="email" id="email" class="input-padrao" required placeholder="seuemail@dominio.com">
+						<label for='telefone'>Telefone:</label>
+						<input type="tel" id="telefone" class="input-padrao" required placeholder="XX-XXXXX-XXXX">	
+
+						<label>Mensagem:</label>
+						<textarea cols="70" rows="10" class="input-padrao" required></textarea>
+
+						<input type="submit" value="Enviar formulário" class="enviar">
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<nav class="posicaoBaixo">
+				<ul>
+					<li><img src="img/insta.png" class="fotosLinks"><a href="https://www.instagram.com/joaao_patrick/">Instagram</a></li>
+					<li><img src="img/face.png"class="fotosLinks"><a href="https://www.facebook.com/marcelo.motta.7140/">Facebook</a></li>
+					<li><img src="img/x.png"class="fotosLinks"><a href="https://x.com/pvt_jotape">Twitter</a></li>
+					<li><img src="img/linkedin.png"class="fotosLinks"><a href="https://www.linkedin.com/in/jo%C3%A3o-patrick-415161264/">Linkedin</a></li>
+				</ul>
+			</nav>
+			
+		</footer>
+	</body>
+
+</html>
